@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+
+    <!-- ---*--- Build a modular billing system using functions ---*--- -->
+
+
+    <script>
+
+        (function () {
+
+            let otp = Math.floor(100000 + Math.random() * 900000);
+
+            alert("Your OTP is: " + otp);
+
+            let userOtp = prompt("Enter the OTP:");
+
+            if (Number(userOtp) === otp) {
+                alert("OTP Verified Successfully");
+            } else {
+                alert("Invalid OTP");
+            }
+
+        })();
+
+
+    </script>
+
+
+</body>
+
+</html>

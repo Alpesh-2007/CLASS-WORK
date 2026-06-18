@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+
+    <!-- ---*--- Check if a number is Perfect using function ---*--- -->
+
+
+    <script>
+
+
+        const isPerfect = function (num) {
+            let sum = 0;
+
+            for (let i = 1; i < num; i++) {
+                if (num % i === 0) {
+                    sum += i;
+                }
+            }
+
+            if (sum === num) {
+                return "Perfect Number";
+            } else {
+                return "Not a Perfect Number";
+            }
+        };
+
+        let num = Number(prompt("Enter the number:"))
+
+        console.log("Number:", num, "is", isPerfect(num));
+
+
+    </script>
+
+
+    <!-- ---*--- Build a modular billing system using functions ---*---- -->
+
+
+    <script>
+
+
+        const calculateSubtotal = function (price, quantity) {
+            return price * quantity;
+        };
+
+        const calculateTax = function (subtotal) {
+            return subtotal * 0.18;
+        };
+
+        const calculateTotalBill = function (subtotal, tax) {
+            return subtotal + tax;
+        };
+
+        let price = Number(prompt("Enter the price:"))
+        console.log("Price:", price);
+        let quantity = Number(prompt("Enter the quantity:"))
+        console.log("Quantity:", quantity);
+
+        let subtotal = calculateSubtotal(price, quantity);
+        let tax = calculateTax(subtotal);
+        let totalBill = calculateTotalBill(subtotal, tax);
+
+        console.log("Subtotal:", subtotal);
+        console.log("Tax:", tax);
+        console.log("Total Bill:", totalBill);
+
+
+    </script>
+
+
+</body>
+
+</html>
