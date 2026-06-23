@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array Complated</title>
+</head>
+
+<body>
+
+
+
+    <script>
+
+
+        // ---------- QUESTION:-1 ----------
+
+
+        // let numbers = [3, 1, 4, 1, 5, 9, 2, 6, 5, 3, 5];
+        // console.log("Original Array:-", numbers);
+
+        // numbers.sort((a, b) => {
+        //     return a - b;
+        // });
+        // console.log("Ascending Order:-", numbers);
+
+
+
+        // ---------- QUESTION:-2 ----------
+
+
+        // let numbers = [2, 4, 6, 8, 10];
+        // console.log(numbers);
+
+        // let even = numbers.every((elements) => {
+        //     return elements % 2 == 0;
+
+        // })
+        // console.log(even,`(since all numbers are even)`);
+
+
+
+        // ---------- QUESTION:-3 ----------
+
+
+        // let numbers = [1, 3, 5, 7, 8, 9];
+        // console.log(numbers);
+
+        // let even = numbers.some((element) => {
+
+        //     return element % 2 == 0;
+        // })
+
+        // console.log(even, "(since 8 is an even number)");
+
+
+        // ---------- QUESTION:-4  [1]----------
+
+
+        // var Arr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+
+        // var print = Arr.forEach((element) => {
+
+        //     console.log(element);
+        // })
+
+
+        // ---------- QUESTION:-4 [2] ----------
+
+
+        // var Arr = [1, 2, 3, 4, 5];
+        // console.log(Arr);
+
+        // var ans = Arr.map((element) => {
+        //     return element * element;
+
+        // })
+        // console.log(ans);
+
+
+        // ---------- QUESTION:-4 [3] ----------
+
+
+        // var Arr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20];
+        // console.log(Arr);
+
+        // var odd = Arr.filter((element) => {
+
+        //     return element % 2 == 1;
+        // })
+
+        // console.log("Odd Numbers:-", odd);
+
+
+        // ---------- QUESTION:-4 [4] ----------
+
+
+        // var Arr = [50, 2, 3, 66, 22, 33, 48, 69, 70, 90];
+        // console.log(Arr);
+
+        // var greater = Arr.filter((element) => {
+
+        //     return element > 50;
+
+
+        // })
+
+        // console.log("Greater than 50 :-",greater);
+
+
+        // ---------- QUESTION:-5 [1] ----------
+
+        var Arr = [1, 3, 5, 7, 9, 11, 13, 115];
+        console.log(Arr);
+
+        var multiplay = Arr.map((element) => {
+
+            return element * 5;
+
+
+        })
+        console.log("Multiplay of all elements by 5:-", multiplay);
+
+        // ---------- QUESTION:-5 [2] ----------
+
+
+        var greater = Arr.filter((element) => {
+
+            return element > 100;
+        })
+        console.log("Greater than 100:-", greater);
+
+
+        // ---------- QUESTION:-5 [3] ----------
+
+
+        console.log("Final result:-");
+
+        multiplay.forEach((element) => {
+
+            console.log(element);
+
+        })
+        greater.forEach((element) => {
+
+            console.log(element);
+
+        })
+
+    </script>
+
+</body>
+
+</html>
