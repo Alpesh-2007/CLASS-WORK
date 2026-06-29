@@ -4,132 +4,117 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Array Tasks</title>
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            gap: 50px;
+            height: 100vh;
+            background-color: rgb(84, 83, 83);
+        }
+
+        div {
+            background-color: black;
+            color: rgb(84, 83, 83);
+            font-size: 24px;
+            font-family: verdana;
+            padding: 30px;
+        }
+
+        section {
+            display: flex;
+            font-size: 36px;
+            gap: 50px;
+        }
+
+        main {
+            display: flex;
+            gap: 20px;
+            background-color: darkslategray;
+            padding: 20px;
+        }
+
+        /* .success{
+            color: lime;
+        }
+        .error{
+            color: red;
+        } */
+    </style>
 </head>
 
 <body>
+    <section>
+        <main>
+            True : <aside>0</aside>
+        </main>
+        <main>
+            False : <aside>0</aside>
+        </main>
+        <main>
+            Total Space : <aside>0</aside>
+        </main>
+    </section>
+    <div>
+        Indian history spans over 5,000 years, evolving from the ancient Indus Valley Civilization into a melting pot of
+        diverse empires, cultures, and religions. From early Vedic traditions and mighty empires like the Mauryas to the
+        monumental Mughal era and the struggle against British rule, it remains a rich, foundational global heritage
+    </div>
+
+     <!-- <script src="script.js"></script> -->
+     
+<script>
+    var mydata = document.querySelector('div').innerText;
+document.querySelector('div').innerHTML = "";
+for (const i in mydata) {
+    document.querySelector('div').innerHTML += `<span>${mydata[i]}</span>`;
+}
 
 
-    <script>
+var index = 0;
+document.body.onkeypress = function (event) {
+    if (event.key == mydata[index]) {
+
+        document.querySelectorAll('span')[index].style.color = "lime";
+
+        // True count
+
+        document.querySelectorAll("aside")[0].innerHTML++;
+
+        // Space count
 
 
-        // ----------QUESTION:-1 ----------
+        if (mydata[index] == " ") {
+            document.querySelectorAll("aside")[2].innerHTML++;
+        }
+
+        // console.log(event.key, mydata[0], "Match");
+    } else {
+        document.querySelectorAll('span')[index].style.color = "red";
 
 
-        var Arr = [1, 2, 3];
-        console.log(Arr);
+        // False count
 
-        Arr.push(4);
-        console.log("After Push", Arr);
-
-        Arr.pop();
-        console.log("After  Pop:-", Arr);
+        document.querySelectorAll("aside")[1].innerHTML++;
 
 
-        // ----------QUESTION:-2 ----------
+        console.log(event.key, mydata[index], "No Match,");
+    }
+    index++;
+    // console.log(event);
 
-
-        var Arr = [];
-        console.log(Arr);
-
-        Arr.push(1, 2, 3);
-        console.log(Arr);
-
-        Arr.shift();
-        console.log(Arr);
-
-
-        // ----------QUESTION:-3 ----------
-
-
-        var Arr = [];
-        console.log();
-
-        Arr.push(1, 2, 3);
-        console.log(Arr);
-
-        Arr.pop();
-        console.log(Arr);
-
-
-        // ----------QUESTION:-4 ----------
-
-
-        var Arr = ['b', 'c'];
-        console.log();
-
-        Arr.unshift("a");
-        console.log();
-
-        Arr.shift();
-        console.log();
-
-
-        // ---------- QUESTION:-5 ----------
-
-
-        var Arr = [11, 22, 33, 44, 55];
-        console.log("Origanal Array:-", Arr);
-
-        Arr.reverse();
-        console.log("Revers Array:-", Arr);
-
-
-        // ----------QUESTION:-6 ---------- 
-
-
-
-        var Arr = ["John", "Jane", "Doe"];
-        console.log(Arr);
-
-        Arr.push("Smith");
-        console.log("After Pushing:-", Arr);
-
-        Arr.pop();
-        console.log("After Poping:-", Arr);
-
-        Arr.unshift("Alice");
-        console.log("After Unsifting:-", Arr)
-
-        Arr.shift();
-        console.log("After Shifting:-", Arr);
-
-
-        // ----------QUESTION:-7 ----------
-
-
-
-        var Arr = [`Apple`, `Orange`, `Banana`];
-        console.log(Arr);
-
-        Arr.push(`Grapes`);
-        console.log("After Pushing:-", Arr);
-
-        Arr.pop();
-        console.log("After Poping:-", Arr);
-
-        Arr.unshift(`Pear`);
-        console.log("After Unshifting:-", Arr)
-
-        Arr.shift();
-        console.log("After Shifting:-", Arr);
-
-
-        // ----------QUESTION:-8 ----------
-
-
-        var Arr = [1, 2, 3, 4, 5];
-        console.log();
-
-        Arr.splice(0, 1);
-        console.log(Arr);
-
-
-
-    </script>
-
+}
+</script>
 
 </body>
-
 
 </html>
